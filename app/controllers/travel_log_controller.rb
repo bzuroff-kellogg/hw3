@@ -8,7 +8,10 @@ class TravelLogController < ApplicationController
   end
   
   def show
-     @place = Place.find_by({ "id" => params["id"] })
+    @place = Place.find_by({ "id" => params["id"] })
+    @entries = Entry.where({ "place_id" => @place["id"] })
+    render :template => "travel_log/show"
+
   end
 
   def create

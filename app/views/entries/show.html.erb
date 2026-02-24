@@ -1,0 +1,8 @@
+<h1><%= @entry["title"] %></h1>
+
+<ul>
+  <li><%= @entry["occurred_on"] %></li>
+  <li><%= @entry["description"] %></li>
+</ul>
+
+<p><a href="/travel_log/<%= @place["id"] %>">Back to <%= @place["name"] %></a></p>

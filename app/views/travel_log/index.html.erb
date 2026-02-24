@@ -2,10 +2,9 @@
 <ul>
 <% for place in @places %>
 <li>
+      <a href="/travel_log/<%= place["id"] %>"><%= place["name"] %></a>
+ </li>
 
-      <a href="/travel_log/<%= place["id"] %>"><%= place["name"] %>
-      </a>
 <% end %>
-</li>
 </ul>
 <p><a href="/travel_log/new">New Place</a></p>
